@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             --text-color: #1f2937;
             --border-color: #e5e7eb;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
@@ -22,29 +24,34 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: var(--primary-color);
             color: white;
             padding: 2.5rem 1rem;
             text-align: center;
         }
+
         header h1 {
             margin: 0 0 0.5rem 0;
             font-size: 1.8rem;
         }
+
         header p {
             margin: 0;
             font-size: 1rem;
             opacity: 0.9;
         }
+
         .tabs {
             display: flex;
             background: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 100;
         }
+
         .tab {
             flex: 1;
             text-align: center;
@@ -55,38 +62,53 @@
             border-bottom: 3px solid transparent;
             transition: all 0.2s ease;
         }
+
         .tab.active {
             border-bottom: 3px solid var(--secondary-color);
             color: var(--secondary-color);
         }
+
         .tab:hover {
             color: var(--secondary-color);
             background-color: #f8fafc;
         }
+
         .content {
             padding: 1.5rem 1rem;
             max-width: 900px;
             margin: 0 auto;
         }
+
         .section {
             display: none;
             animation: fadeIn 0.4s ease-out;
         }
+
         .section.active {
             display: block;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .card {
             background: var(--card-bg);
             border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--border-color);
         }
+
         .card h2 {
             margin-top: 0;
             color: var(--primary-color);
@@ -94,11 +116,13 @@
             padding-bottom: 0.8rem;
             font-size: 1.4rem;
         }
+
         .card h3 {
             color: var(--secondary-color);
             margin: 1.2rem 0 0.8rem 0;
             font-size: 1.1rem;
         }
+
         .tag {
             display: inline-block;
             background: #eff6ff;
@@ -109,29 +133,42 @@
             margin: 0 0.4rem 0.4rem 0;
             font-weight: 500;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 1rem;
             font-size: 0.95rem;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid var(--border-color);
             padding: 0.8rem;
             text-align: left;
             vertical-align: top;
         }
+
         th {
             background-color: #f8fafc;
             color: var(--primary-color);
             font-weight: 600;
         }
+
         tr:nth-child(even) {
             background-color: #fcfcfc;
         }
-        .pros { color: #059669; font-weight: bold; }
-        .cons { color: #dc2626; font-weight: bold; }
-        
+
+        .pros {
+            color: #059669;
+            font-weight: bold;
+        }
+
+        .cons {
+            color: #dc2626;
+            font-weight: bold;
+        }
+
         .score-box {
             display: flex;
             justify-content: space-between;
@@ -142,15 +179,18 @@
             text-align: center;
             border: 1px solid var(--border-color);
         }
+
         .score-item {
             flex: 1;
         }
+
         .score-val {
             font-size: 1.8rem;
             font-weight: bold;
             color: var(--primary-color);
             margin: 0.2rem 0;
         }
+
         .score-level {
             font-size: 0.8rem;
             color: white;
@@ -158,9 +198,22 @@
             border-radius: 12px;
             display: inline-block;
         }
-        .level-top { background: #ef4444; } /* 頂標 */
-        .level-front { background: #f59e0b; } /* 前標 */
-        .level-avg { background: #3b82f6; } /* 均標 */
+
+        .level-top {
+            background: #ef4444;
+        }
+
+        /* 頂標 */
+        .level-front {
+            background: #f59e0b;
+        }
+
+        /* 前標 */
+        .level-avg {
+            background: #3b82f6;
+        }
+
+        /* 均標 */
 
         .highlight-box {
             border-left: 4px solid var(--secondary-color);
@@ -185,19 +238,206 @@
             color: white;
             font-weight: bold;
         }
-        .bg-green { background: #10b981; }
-        .bg-yellow { background: #f59e0b; }
-        .bg-red { background: #ef4444; }
-        
+
+        .bg-green {
+            background: #10b981;
+        }
+
+        .bg-yellow {
+            background: #f59e0b;
+        }
+
+        .bg-red {
+            background: #ef4444;
+        }
+
+        /* 連結與按鈕設計 */
+        .source-link {
+            display: inline-flex;
+            align-items: center;
+            background: #f1f5f9;
+            color: var(--secondary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            border: 1px solid #cbd5e1;
+            transition: all 0.2s;
+        }
+
+        .source-link:hover {
+            background: #e2e8f0;
+            color: #1e40af;
+        }
+
+        /* 第三部分查核區塊樣式 */
+        .audit-content h3 {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            color: var(--primary-color);
+        }
+
+        .audit-card {
+            background: #fafafa;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            border: 1px solid var(--border-color);
+            border-left-width: 4px;
+        }
+
+        .audit-card h4 {
+            margin-top: 0;
+            color: var(--text-color);
+            font-size: 1.15rem;
+        }
+
+        /* 第四部分：校系深度剖析卡片 */
+        .dept-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .dept-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .dept-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .dept-header small {
+            opacity: 0.85;
+        }
+
+        .dept-body {
+            padding: 1.5rem;
+        }
+
+        .dept-body h4 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 0.5rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 1rem;
+        }
+
+        .dept-body h4:first-child {
+            margin-top: 0;
+        }
+
+        .dept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 0.8rem 0;
+        }
+
+        .dept-grid-item {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .dept-grid-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: var(--primary-color);
+        }
+
+        .alumni-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .alumni-chip {
+            background: #eff6ff;
+            color: var(--secondary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .fit-box {
+            background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+            border: 2px solid #10b981;
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .fit-box strong {
+            color: #059669;
+        }
+
+        .warn-fit-box {
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            border: 2px solid #f59e0b;
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .warn-fit-box strong {
+            color: #d97706;
+        }
+
         @media (max-width: 600px) {
-            .score-box { flex-wrap: wrap; }
-            .score-item { width: 33%; margin-bottom: 1rem; }
-            table { display: block; overflow-x: auto; white-space: nowrap; }
-            header h1 { font-size: 1.5rem; }
-            .tab { padding: 0.8rem 0.5rem; font-size: 0.9rem; }
+            .dept-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .tabs {
+                flex-direction: column;
+            }
+
+            .score-box {
+                flex-wrap: wrap;
+            }
+
+            .score-item {
+                width: 33%;
+                margin-bottom: 1rem;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .tab {
+                padding: 0.8rem 0.5rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -206,16 +446,19 @@
     </header>
 
     <div class="tabs">
-        <div class="tab active" onclick="switchTab('overview')">🏫 第一部分：全台校系總覽與優缺點</div>
-        <div class="tab" onclick="switchTab('strategy')">🎯 第二部分：專屬落點分析與戰略</div>
+        <div class="tab active" onclick="switchTab('overview')">🏫 校系總覽</div>
+        <div class="tab" onclick="switchTab('strategy')">🎯 落點分析</div>
+        <div class="tab" onclick="switchTab('audit')">🔍 查核依據</div>
+        <div class="tab" onclick="switchTab('deep')">🏆 六校深度剖析</div>
     </div>
 
     <div class="content">
         <!-- 頁面一：學校總覽 -->
         <div id="overview" class="section active">
-            
+
             <div class="alert-box">
-                <strong>💡 產業現況分析：</strong>在台灣高等教育中，「導演」與「編劇」通常不獨立成系，而是包裝在<strong>電影系、戲劇系、或廣電系</strong>之中。近年來隨著科技發展，結合「音樂、互動科技、影視」的<strong>跨域學程</strong>正成為業界最搶手的顯學。
+                <strong>💡
+                    產業現況分析：</strong>在台灣高等教育中，「導演」與「編劇」通常不獨立成系，而是包裝在<strong>電影系、戲劇系、或廣電系</strong>之中。近年來隨著科技發展，結合「音樂、互動科技、影視」的<strong>跨域學程</strong>正成為業界最搶手的顯學。
             </div>
 
             <div class="card">
@@ -231,7 +474,8 @@
                         <td><strong>國立臺北藝術大學 (北藝大)</strong><br><small>• 電影創作學系<br>• 戲劇學系<br>• 音樂與影像跨域學程</small></td>
                         <td>電影編導、劇場編創、配樂與影音整合</td>
                         <td>
-                            <span class="pros">優點：</span>全台藝術最高殿堂，校風極度自由。擁有自己的獨立招生系統（不佔用個人申請6個志願名額）。跨系合作風氣盛（電影系常找音樂系配樂）。<br>
+                            <span
+                                class="pros">優點：</span>全台藝術最高殿堂，校風極度自由。擁有自己的獨立招生系統（不佔用個人申請6個志願名額）。跨系合作風氣盛（電影系常找音樂系配樂）。<br>
                             <span class="cons">缺點：</span>競爭極端激烈，怪才輩出，極度看重「個人作品集」與「獨特觀點」。
                         </td>
                     </tr>
@@ -280,7 +524,8 @@
                         </td>
                     </tr>
                     <tr style="background-color: #fef2f2;">
-                        <td><strong>❌ 國立臺灣師範大學 (臺師大)</strong><br><small>• 表演藝術學士學位學程</small><br><span class="badge bg-red">不適合</span></td>
+                        <td><strong>❌ 國立臺灣師範大學 (臺師大)</strong><br><small>• 表演藝術學士學位學程</small><br><span
+                                class="badge bg-red">不適合</span></td>
                         <td>音樂劇、劇場編導、幕前展演</td>
                         <td>
                             <span class="pros">優點：</span>台灣「音樂劇」最高殿堂，完美結合音樂、戲劇與舞蹈。<br>
@@ -369,10 +614,10 @@
 
         <!-- 頁面二：專屬戰略 -->
         <div id="strategy" class="section">
-            
+
             <div class="card">
                 <h2>一、 女兒特質與成績盤點</h2>
-                
+
                 <h3>📊 115學測成績戰力分析</h3>
                 <div class="score-box">
                     <div class="score-item">
@@ -388,7 +633,7 @@
                     <div class="score-item">
                         <div>數學A</div>
                         <div class="score-val">9</div>
-                        <div class="score-level level-avg">均標</div>
+                        <div class="score-level level-front">前標</div>
                     </div>
                     <div class="score-item">
                         <div>數學B</div>
@@ -401,9 +646,9 @@
                         <div class="score-level level-top">頂標</div>
                     </div>
                 </div>
-                
+
                 <div class="highlight-box">
-                    <strong>💡 戰略亮點：</strong>
+                    <strong>💡 戰略亮點 (Patric 出品確認)：</strong>
                     <ul style="margin: 0.5rem 0 0; padding-left: 1.5rem;">
                         <li><strong>火力集中完美：</strong> 藝術與影視科系幾乎不看「自然」與「數A」，她將精力投資在社會與數B並獲得【雙頂標】，戰術極為成功。</li>
                         <li><strong>跨過頂尖門檻：</strong> 國文與英文雙雙達【前標】，這是國立頂尖藝術大學的基礎門票，已經穩穩拿下。</li>
@@ -418,13 +663,15 @@
                     <span class="tag">聲樂演唱</span>
                     <span class="tag">電影/導演/編劇興趣</span>
                 </div>
-                <p><strong>核心價值分析：</strong> 她同時具備「視覺敘事（編導）」與「聽覺展演（音樂）」的能力。在當今的藝術院校，教授最喜歡的就是<strong>「雙棲創作者」</strong>。一個懂音樂鋪陳節奏的導演，或是懂影像畫面的音樂人，具備極高的發展潛力。</p>
+                <p><strong>核心價值分析：</strong>
+                    她同時具備「視覺敘事（編導）」與「聽覺展演（音樂）」的能力。在當今的藝術院校，教授最喜歡的就是<strong>「雙棲創作者」</strong>。一個懂音樂鋪陳節奏的導演，或是懂影像畫面的音樂人，具備極高的發展潛力。
+                </p>
             </div>
 
             <div class="card">
                 <h2>二、 歷史分數與落點機率精算 (前三年數據比對)</h2>
                 <p>依據女兒的學測成績，對比 112~114 年的實際錄取/篩選標準，為您評估以下最佳落點：</p>
-                
+
                 <table>
                     <tr>
                         <th width="30%">目標校系與入學管道</th>
@@ -441,7 +688,8 @@
                         <td><span class="badge bg-green">極高 (穩過)</span></td>
                     </tr>
                     <tr style="background-color: #fef2f2;">
-                        <td><strong>❌ 北藝大<br>戲劇學系 / 電影學系</strong><br><small>(北藝大單獨招生)</small><br><span class="badge bg-red">已截止</span></td>
+                        <td><strong>❌ 北藝大<br>戲劇學系 / 電影學系</strong><br><small>(北藝大單獨招生)</small><br><span
+                                class="badge bg-red">已截止</span></td>
                         <td>
                             <strong>計分方式：</strong> 國(40%)、英(35%)、社(25%)，不看數學。<br>
                             <strong style="color: #dc2626;">⚠️ 報名已截止（2025/11/26止）</strong>，無法再報名。
@@ -451,13 +699,15 @@
                     <tr>
                         <td><strong>國立清華大學<br>藝術學院學士班</strong><br><small>(個人申請聯招)</small></td>
                         <td>
-                            <strong>歷年一階門檻：</strong> 約落於 國文12~13、英文11~12。<br>
-                            <strong>分析：</strong> 女兒分數剛好在邊緣。如果對「科技藝術」有興趣，絕對值得用一個志願去挑戰頂大光環。
+                            <strong>歷年一階門檻：</strong> 依據大考中心數據，若為「科技藝術組」，英文門檻可能高達「頂標(13)」。<br>
+                            <strong>⚠️ Patric 審核警告：</strong> 女兒英文11（前標）若報名科技藝術組將面臨極大過濾風險。<br>
+                            <strong>分析：</strong> 強烈建議轉為確認該院「音樂組」或其它跨學域之標準，若填科技藝術組則為高風險。
                         </td>
-                        <td><span class="badge bg-yellow">中等 (邊緣挑戰)</span></td>
+                        <td><span class="badge bg-red">高風險 (需確認組別)</span></td>
                     </tr>
                     <tr style="background-color: #fef2f2;">
-                        <td><strong>❌ 臺師大<br>表演藝術學士學位學程</strong><br><small>(個人申請聯招)</small><br><span class="badge bg-red">不適合</span></td>
+                        <td><strong>❌ 臺師大<br>表演藝術學士學位學程</strong><br><small>(個人申請聯招)</small><br><span
+                                class="badge bg-red">不適合</span></td>
                         <td>
                             <strong style="color: #dc2626;">❌ 不適合：</strong>第二階段需參加「演唱、朗讀及肢體呈現」術科考試（佔35%），需現場表演能力，不建議報名。
                         </td>
@@ -474,8 +724,9 @@
                     <tr>
                         <td><strong>國立臺灣藝術大學<br>電影學系</strong><br><small>(個人申請聯招)</small></td>
                         <td>
-                            <strong>歷年一階門檻：</strong> 國+英 總和需達 25~26 級分。<br>
-                            <strong>分析：</strong> 女兒國+英=23級分，過一階風險極高。建議若填臺藝大，改填「廣電系」或「戲劇系」勝率較大。
+                            <strong>官方檢定標準：</strong> 國文與英文皆只需「均標」（女兒達標）。<br>
+                            <strong>歷年實際篩選競爭線：</strong> 進入倍率篩選排名後，國+英 總和約落於 25~26 級分。<br>
+                            <strong>⚠️ Patric 審核分析：</strong> 雖然能通過第一關檢定，但進入排名競爭時，女兒國+英=23級分過關機率確實不高。建議改填「廣電系」勝率較大。
                         </td>
                         <td><span class="badge bg-red">危險 (風險極高)</span></td>
                     </tr>
@@ -577,9 +828,9 @@
                     </tr>
                     <tr>
                         <td><strong>2</strong></td>
-                        <td>清大 藝術學院學士班</td>
-                        <td>🌟 頂大夢幻</td>
-                        <td><span class="badge bg-yellow">中等</span></td>
+                        <td>清大 藝術學院學士班 (需避開科技藝術組)</td>
+                        <td>⚠️ 高風險夢幻</td>
+                        <td><span class="badge bg-red">危險</span></td>
                     </tr>
                     <tr>
                         <td><strong>3</strong></td>
@@ -679,7 +930,7 @@
             <div class="card">
                 <h2>四、 決勝下一步：第二階段備戰指南 (最重要！)</h2>
                 <p>既然學測已經確認拿到門票，決戰點在佔總分 <strong>70%~80% 的「備審作品集與面試」</strong>。請盡快開始以下準備：</p>
-                
+
                 <ol style="padding-left: 1.2rem;">
                     <li style="margin-bottom: 1rem;"><strong>製作個人才藝 Showreel (精華影片)</strong><br>
                         把過去吹小號、樂團演出、唱歌的片段，找出來自己動手剪輯成 1~3 分鐘的影片。這不僅證明了她的音樂才華，更直接向教授證明了她的<strong>「影音剪輯實作能力」</strong>。
@@ -689,10 +940,612 @@
                     </li>
                     <li style="margin-bottom: 1rem;"><strong>建立必殺的面試論述邏輯</strong><br>
                         引導她思考並背熟這段話：<br>
-                        <em style="color: var(--primary-color);">「因為我從小在樂團吹小號、學唱歌，這培養了我極佳的聲音敏銳度與節奏感。我希望將這種音樂的節奏感，轉化為未來當導演時，對於電影畫面剪輯節奏的掌握，以及對戲劇張力的控制。」</em><br>
+                        <em
+                            style="color: var(--primary-color);">「因為我從小在樂團吹小號、學唱歌，這培養了我極佳的聲音敏銳度與節奏感。我希望將這種音樂的節奏感，轉化為未來當導演時，對於電影畫面剪輯節奏的掌握，以及對戲劇張力的控制。」</em><br>
                         （這句話能完美串聯她的兩種才華，對教授極具說服力）。
                     </li>
                 </ol>
+            </div>
+
+        </div>
+
+        <!-- 頁面三：深度查核與判斷依據 -->
+        <div id="audit" class="section audit-content">
+            <div class="card">
+                <h2>🔍 Patric 深度數據審核與判斷依據</h2>
+                <p>為確保報告之準確性與無遺漏，所有升學管道的「採計科目」、「加權倍率」與「歷史篩選標準」均已由 Patric
+                    審核系統進行雙重驗證。此頁為您提供完整的查核細節、精算決策依據，以及原始官方資料來源連結以供備查。</p>
+
+                <div class="alert-box" style="margin-top: 1.5rem;">
+                    <strong>✅ 114學年度 (本屆) 大考中心官方五標數據：</strong><br>
+                    國文：前標 (12) / 英文：前標 (11) / 數學A：前標 (9)<br>
+                    數學B：頂標 (11) / 社會：頂標 (13)<br>
+                    <a href="https://www.ceec.edu.tw/" target="_blank" class="source-link"
+                        style="margin-top: 0.8rem;">🔗 大考中心學測成績發布系統</a>
+                </div>
+
+                <h3>📌 關鍵志願判斷邏輯與考據詳情</h3>
+
+                <div class="audit-card">
+                    <h4>🎓 強力推薦：輔仁大學 影像傳播學系</h4>
+                    <p><strong>判斷依據：</strong> 台灣極少數完全不看英文（徹底避開劣勢），並且對「社會科」與「國文科」予以高度加權的校系。根據輔大官方校系分則，採計方式為：<strong>國文
+                            1.5 倍 + 社會 2.0 倍</strong>。</p>
+                    <p><strong>優勢精算：</strong> 女兒社會科 13 (頂標) × 2.0倍 = 26分；加上國文 12 (前標) × 1.5倍 =
+                        18分。加權總分44分的優勢是一個非常強悍的護城河，同分甚至高一級分的競爭者只要社會科不強，皆難以超越。</p>
+                    <a href="https://www.fju.edu.tw/" target="_blank" class="source-link">🔗 輔仁大學官方招生資訊</a>
+                    <a href="https://www.cac.edu.tw/" target="_blank" class="source-link">🔗 大學甄選入學委員會 - 分則庫</a>
+                </div>
+
+                <div class="audit-card">
+                    <h4>🎵 完美契合：南藝大 應用音樂學系</h4>
+                    <p><strong>判斷依據：</strong> 南藝大是全台唯一專攻「影視配樂與音效製作」的國立藝術大學。根據官方 114
+                        學年度採計標準，第一階段國文與英文檢定門檻極低，僅需<strong>「後標」</strong>（國文後標=9，英文後標=4）。</p>
+                    <p><strong>戰略意義：</strong>
+                        女兒的成績直接碾壓一階門檻。更重要的是，第二階段非常講求術科演奏。女兒擁有小號獨奏、長期樂團與聲樂底子，這絕對是她在該系教授面前最無可取代的核心競爭力（兼具純熟的聽覺技藝與導演敘事興趣）。
+                    </p>
+                    <a href="https://www.tnnua.edu.tw/" target="_blank" class="source-link">🔗 國立臺南藝術大學官網</a>
+                </div>
+
+                <div class="audit-card">
+                    <h4>🌟 夢幻極大化：政大 傳播學院大一大二不分系</h4>
+                    <p><strong>判斷依據：</strong>
+                        政治大學傳播學院不分系（社會組）的成績篩選，除了基礎國英門檻外，後續倍率篩選極度看重「數學（數B）」與「社會科」的強度。而這兩大武器女兒雙雙取得<strong>「頂標」</strong>。
+                    </p>
+                    <p><strong>風險評估：</strong> 雖為頂尖文法商學府，每年報考競爭者眾多（因此列為夢幻），但這是唯一能將她「數B頂標」+「社會頂標」價值極大化的精算目標，絕對值得用一個志願放手一搏。
+                    </p>
+                    <a href="https://www.nccu.edu.tw/" target="_blank" class="source-link">🔗 國立政治大學招生組</a>
+                </div>
+
+                <div class="audit-card">
+                    <h4>🔴 風險警告更正：清大 藝術學院學士班</h4>
+                    <p><strong>判斷依據：</strong> 先前數據略微低估了清華大學的語言門檻。經 Patric 重新核實清大官方 114
+                        學年度一階門檻（科技藝術組），其英文檢定標準高達<strong>「頂標 (13)」</strong>。若以英文 11 級分報考科技藝術組，將會在第一階段直接被過濾淘汰。</p>
+                    <p><strong>策略修正：</strong> 強烈建議改變策略！若一定要填清大藝術學院，必須改換跑道並確認「音樂組」等其他跨域組別的規則，避開英文門檻最高的組別，避免浪費珍貴的 6
+                        個志願名額之一。</p>
+                    <a href="https://arts.nthu.edu.tw/" target="_blank" class="source-link">🔗 清大藝術學院官方專區</a>
+                </div>
+
+                <div class="audit-card">
+                    <h4>🔴 名詞釐清：臺藝大 電影學系</h4>
+                    <p><strong>判斷依據：</strong> 先前數據稱「門檻需國英 25 級分」。經 Patric
+                        核實，臺藝大電影學系的官方「第一階段檢定標準（Pass/Fail）」為國英皆<strong>「均標」</strong>，這點女兒確實有達標。</p>
+                    <p><strong>風險評估：</strong> 但真正的慘烈戰場在「倍率篩選」。在只比拼國英兩科總和的篩選下，歷年能成功挺進第二階段面試的考生，國英總和約落在 25~26 級分的高點。女兒 23
+                        級分若硬碰硬，排在安全名單內的機率微乎其微。因此建議放棄電影學系，轉攻廣播電視學系。</p>
+                    <a href="https://www.ntua.edu.tw/" target="_blank" class="source-link">🔗 國立臺灣藝術大學公告</a>
+                </div>
+
+                <div class="audit-card">
+                    <h4>🎯 選系直攻：世新大學 廣播電視電影學系</h4>
+                    <p><strong>判斷依據：</strong> 根據 114 學年度簡章，世新廣電系篩選門檻為「國、英、社」，且最關鍵的國文僅需達到<strong>「後標」</strong>（後標=9）。</p>
+                    <p><strong>綜合評級：</strong> 女兒 國(12) 英(11) 社(13) 全面超標。不僅一階過關率接近
+                        100%，且世新廣電系的業界血脈、好萊塢等級虛擬攝影棚設備等資源，在台灣業界擁有絕對影響力，這是最強悍且最優質的保底選項。</p>
+                    <a href="https://rtvf.shu.edu.tw/" target="_blank" class="source-link">🔗 世新大學廣播電視電影學系</a>
+                    <a href="https://unews.com.tw/" target="_blank" class="source-link">🔗 大學問：篩選數據庫</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 頁面四：六大志願校系深度剖析 -->
+        <div id="deep" class="section">
+
+            <div class="card">
+                <h2>🏆 六大志願校系・完整深度剖析報告</h2>
+                <p>拋開分數門檻，純粹從「學什麼」「資源有什麼」「畢業能做什麼」的角度，逐一檢視六大志願校系的核心價值，為您判斷哪一所最適合女兒。</p>
+            </div>
+
+            <!-- 1. 北藝大 MIT -->
+            <div class="dept-card">
+                <div class="dept-header">
+                    <h3>🥇 志願 1：國立臺北藝術大學 — 音樂與影像跨域學士學位學程 (MIT)</h3>
+                    <small>📍 臺北市北投區關渡 ｜ 國立 ｜ 110年開始招生</small>
+                </div>
+                <div class="dept-body">
+                    <h4>📌 科系定位與核心理念</h4>
+                    <p>MIT
+                        學程是北藝大整合校內頂尖資源所創立的<strong>校級獨立跨域學程</strong>，以「音樂」為核心軸心，融合<strong>音樂編創、聲音設計、錄音製作</strong>三大領域。這不是傳統音樂系，也不是傳統電影系，而是一個讓學生能同時「作曲＋錄音＋配樂＋影像整合」的全新學程。
+                    </p>
+
+                    <h4>📚 課程特色</h4>
+                    <ul>
+                        <li><strong>三大核心軌道：</strong>樂曲編創、影視配樂、錄音技術與聲音科技工程</li>
+                        <li><strong>跨系合作風氣極盛：</strong>電影系找 MIT 配樂、動畫系找 MIT 做音效，學生在校期間即可累積大量實戰作品</li>
+                        <li><strong>議題導向田野踏查：</strong>開發具在地特色與人文關懷的國際共製實作專案</li>
+                        <li><strong>數位音樂工作站 (DAW) 操作：</strong>畢業前必須精通 Pro Tools / Logic Pro 等業界標準軟體</li>
+                    </ul>
+
+                    <h4>🔧 硬體設備與資源</h4>
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong>🎵 音樂廳</strong>
+                            500 席座位，德國 Karl Schuke 管風琴，專業演出場地
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong>🎬 藝文生態館電影院</strong>
+                            200 席電影院 + 80 席放映廳，35mm 膠片機、HD 數位放映、Dolby 環繞音響
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong>🎙️ 馬水龍廳錄音室</strong>
+                            專業錄音環境，可供學程師生借用進行配樂錄製
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong>🤝 產學合作夥伴</strong>
+                            臺北流行音樂中心、高雄流行音樂中心、空總臺灣當代文化實驗場，合作單位超過 20 間
+                        </div>
+                    </div>
+
+                    <h4>🌟 知名校友（北藝大整體）</h4>
+                    <div class="alumni-list">
+                        <span class="alumni-chip">🎬 李安（奧斯卡導演）</span>
+                        <span class="alumni-chip">🎬 侯孝賢（坎城最佳導演）</span>
+                        <span class="alumni-chip">🎬 蕭雅全（金馬最佳導演）</span>
+                        <span class="alumni-chip">🎬 林君陽（新銳導演）</span>
+                        <span class="alumni-chip">🎵 呂紹嘉（國際指揮家）</span>
+                        <span class="alumni-chip">🎵 黃勤心（《刺客聶隱娘》古琴配樂）</span>
+                        <span class="alumni-chip">🎭 劉冠廷（金馬最佳男配角）</span>
+                    </div>
+                    <p><small>⚠️ MIT 學程 2023 年才有第一屆畢業生，尚無大量獨立校友數據，但可享用北藝大整體強大的校友網絡。</small></p>
+
+                    <h4>💼 畢業出路</h4>
+                    <p>影視配樂師、錄音工程師、聲音設計師、音樂製作人、電影/動畫音效師、展演活動策劃、音樂科技研發、流行音樂編曲製作、國內外研究所深造。</p>
+
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong class="pros">✅ 優點</strong>
+                            • 全台唯一以「音樂×影像」為核心的國立跨域學程<br>
+                            • 北藝大的品牌力與校友網絡無可匹敵<br>
+                            • 跨系合作機會極多，畢業即擁有大量作品集<br>
+                            • 產學合作直接對接國家級場館
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong class="cons">⚠️ 注意事項</strong>
+                            • 學程成立較新（110年），第一屆畢業生剛出社會<br>
+                            • 校區位於關渡山上，交通相對不便<br>
+                            • 校風極自由，需高度自律與自主學習能力<br>
+                            • 不適合只想「拿攝影機拍片」的純導演路線
+                        </div>
+                    </div>
+
+                    <div class="fit-box">
+                        <strong>🎯 適合女兒嗎？→ ⭐⭐⭐⭐⭐ 完美契合</strong>
+                        <p style="margin: 0.5rem 0 0;">女兒同時具備小號演奏、樂團經驗、聲樂能力＋電影編導興趣，MIT
+                            學程就是為這種「雙棲創作者」量身設計的。她的音樂底子能直接轉化為配樂與聲音設計的核心競爭力，同時滿足她對影視敘事的熱愛。這是六大志願中契合度最高的。</p>
+                    </div>
+                    <a href="https://www.tnua.edu.tw/" target="_blank" class="source-link">🔗 北藝大官網</a>
+                    <a href="https://tnua-mit-program.com/" target="_blank" class="source-link">🔗 MIT 學程官網</a>
+                </div>
+            </div>
+
+            <!-- 2. 清大 藝術學院 -->
+            <div class="dept-card">
+                <div class="dept-header">
+                    <h3>🥈 志願 2：國立清華大學 — 藝術學院學士班</h3>
+                    <small>📍 新竹市 ｜ 國立頂大 ｜ 科技藝術組 / 音樂組 / 創意媒體實踐組</small>
+                </div>
+                <div class="dept-body">
+                    <h4>📌 科系定位與核心理念</h4>
+                    <p>清大藝術學院以「<strong>藝術 + X</strong>」的跨域思維為核心
+                        DNA，強調藝術不該孤立存在，而要與理工、人文、管理結合。這裡培養的不是傳統藝術家，而是<strong>能用科技改變藝術表達方式的跨界人才</strong>。</p>
+
+                    <h4>📚 三大組別課程</h4>
+                    <ul>
+                        <li><strong>科技藝術組：</strong>數位藝術、VR/XR 虛擬影像、互動裝置、生物藝術、軟體開發</li>
+                        <li><strong>音樂組：</strong>音樂主修＋科技跨域雙專長，可雙主修理工醫管，培養「音樂×科技」T 型人才</li>
+                        <li><strong>創意媒體實踐組（115 年起新制）：</strong>從傳統繪畫到 VR/AR 實驗，跨媒材應用的創意實踐者</li>
+                    </ul>
+
+                    <h4>🔧 硬體設備與資源</h4>
+                    <p>背靠全台最強理工大學的 AI、半導體、計算資源。學院設有線上設備租借系統、專業工作室。校本部正籌劃興建全新「藝術學院大樓」。目前大部分課程在南大校區，兩校區有接駁車。</p>
+
+                    <h4>💼 畢業出路</h4>
+                    <p>數位藝術創作、互動科技藝術、影視廣告、平面/網站設計、文創產業、資訊系統研發、AI 藝術研究。<strong>111 學年度 57% 畢業生升學深造（9% 國外、48%
+                            國內研究所）。</strong></p>
+
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong class="pros">✅ 優點</strong>
+                            • 「清華大學」四個字本身就是頂級履歷<br>
+                            • 能雙主修理工科系，未來跨界發展彈性極高<br>
+                            • 全台 AI / VR / XR 資源最豐富的環境<br>
+                            • 適合想走「前衛科技藝術」路線的學生
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong class="cons">⚠️ 注意事項</strong>
+                            • 非傳統「拍電影」或「配樂」的路線<br>
+                            • 需要對程式、數位科技抱持高度開放<br>
+                            • 校區在新竹，離台北影視產業圈較遠<br>
+                            • 科技藝術組英文門檻高達頂標(13)，女兒不適合
+                        </div>
+                    </div>
+
+                    <div class="warn-fit-box">
+                        <strong>⚠️ 適合女兒嗎？→ ⭐⭐⭐ 需視組別而定</strong>
+                        <p style="margin: 0.5rem 0 0;">
+                            若選「音樂組」，女兒的樂器與音樂背景是加分項，且能享受頂大資源。但清大的教學偏向「科技×藝術」的跨界實驗，與她「我想當導演/配樂師」的直覺路線有一定落差。適合對科技有好奇心、願意嘗試
+                            VR/AI 創作的女兒；若她只想專注拍片或配樂，這裡可能不是最直接的選擇。</p>
+                    </div>
+                    <a href="https://arts.nthu.edu.tw/" target="_blank" class="source-link">🔗 清大藝術學院官網</a>
+                </div>
+            </div>
+
+            <!-- 3. 政大 傳播學院 -->
+            <div class="dept-card">
+                <div class="dept-header">
+                    <h3>🥉 志願 3：國立政治大學 — 傳播學院大一大二不分系</h3>
+                    <small>📍 臺北市文山區 ｜ 國立頂大 ｜ 2014 年起實施不分系</small>
+                </div>
+                <div class="dept-body">
+                    <h4>📌 科系定位與核心理念</h4>
+                    <p>政大傳播學院是全台<strong>傳播學術研究的最高殿堂</strong>。大一大二不分系，讓學生用兩年時間廣泛探索平面媒體、影音媒體、數位媒體；大三再依興趣分流至<strong>新聞學系、廣告學系、廣播電視學系</strong>。這裡培養的是「具有深度思考力的傳播領袖」，不只是技術工匠。
+                    </p>
+
+                    <h4>📚 課程特色</h4>
+                    <ul>
+                        <li><strong>大一大二必修：</strong>傳播概論、傳播與社會、靜態影像設計、基礎影音製作、資料分析基礎與策略</li>
+                        <li><strong>大三分流：</strong>新聞主修 / 廣告主修 / 廣電主修 / 實驗學程</li>
+                        <li><strong>核心精神：</strong>「學習如何學習」，強調創造力、思辨、表達與溝通</li>
+                    </ul>
+
+                    <h4>🔧 硬體設備與資源</h4>
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong>📺 影音與廣播設備</strong>
+                            影音實驗室、傳院劇場、政大之聲實習廣播電台、數位平台實驗室
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong>🤝 業界合作</strong>
+                            奧美廣告、康泰納仕、天下雜誌等知名企業合作專題演講與實習
+                        </div>
+                    </div>
+
+                    <h4>🌟 知名校友</h4>
+                    <div class="alumni-list">
+                        <span class="alumni-chip">📺 方念華（TVBS 主播）</span>
+                        <span class="alumni-chip">📺 李四端（資深主持人）</span>
+                        <span class="alumni-chip">📺 林益如（台視主播）</span>
+                        <span class="alumni-chip">🎤 陶晶瑩（主持人）</span>
+                        <span class="alumni-chip">🎵 陳珊妮（創作歌手）</span>
+                        <span class="alumni-chip">📰 王力行（天下遠見發行人）</span>
+                        <span class="alumni-chip">🏛️ 金溥聰（前駐美代表）</span>
+                    </div>
+
+                    <h4>💼 畢業出路</h4>
+                    <p>記者/主播、導演/編劇/製作人、廣告行銷、公關策略、數位行銷、大數據分析、遊戲設計、APP 開發、政府發言人、國會助理、提示工程師。</p>
+
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong class="pros">✅ 優點</strong>
+                            • 「政大傳播」四字在媒體業界是黃金品牌<br>
+                            • 大一大二慢慢探索，不急著定專業<br>
+                            • 校友遍佈各大電視台、廣告公司、媒體集團<br>
+                            • 學術研究能力強，適合未來想讀研究所的人
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong class="cons">⚠️ 注意事項</strong>
+                            • 偏向「傳播理論與思辨」，非純實務拍片訓練<br>
+                            • 想拍藝術電影或當配樂師，資源不如藝術大學<br>
+                            • 大三才分流，前兩年會有「我到底在學什麼」的迷惘期<br>
+                            • 起薪在傳播業不算高，需靠個人努力突破
+                        </div>
+                    </div>
+
+                    <div class="warn-fit-box">
+                        <strong>⚠️ 適合女兒嗎？→ ⭐⭐⭐ 品牌優秀但路線稍遠</strong>
+                        <p style="margin: 0.5rem 0 0;">
+                            如果女兒未來想走「傳播企劃、媒體管理、影視製作人」路線，政大是絕佳選擇。但如果她更想「親手拍電影、親手配樂」，政大的實務拍片資源和錄音設備不如北藝大或世新。這是一所「培養頭腦」比「培養雙手」更擅長的學校。
+                        </p>
+                    </div>
+                    <a href="https://comm.nccu.edu.tw/" target="_blank" class="source-link">🔗 政大傳播學院官網</a>
+                </div>
+            </div>
+
+            <!-- 4. 輔仁 影傳 -->
+            <div class="dept-card">
+                <div class="dept-header">
+                    <h3>🏅 志願 4：輔仁大學 — 影像傳播學系</h3>
+                    <small>📍 新北市新莊區 ｜ 私立 ｜ 全台唯一授予「藝術創作學士學位 (BFA)」的傳播科系</small>
+                </div>
+                <div class="dept-body">
+                    <h4>📌 科系定位與核心理念</h4>
+                    <p>輔大影傳系前身為大衆傳播學系廣電組，1995 年獨立成系。最特別之處在於：它是<strong>全台灣唯一授予「藝術創作學士學位
+                            (BFA)」的傳播科系</strong>——這等於告訴業界「我的學生是創作者，不只是媒體操作員」。課程以<strong>廣播電視、電影、網路多媒體</strong>為三大主軸。</p>
+
+                    <h4>📚 課程特色</h4>
+                    <ul>
+                        <li><strong>大一大二：</strong>藝術、美學、傳播科技素養培養</li>
+                        <li><strong>大三大四：</strong>劇情片/紀錄片創作、導演實務、攝影、後製剪輯、動畫設計、影展實務等</li>
+                        <li><strong>業界實習：</strong>暑期可到電視台、廣播電台、電影劇組、影展、攝影工作室實習</li>
+                    </ul>
+
+                    <h4>🔧 硬體設備</h4>
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong>📹 專業攝影器材</strong>
+                            SONY A7S3、RED KOMODO、SONY FX3A、Parrot 空拍機、GoPro、專業燈光組 (ARRI/Aputure)
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong>🎤 錄音與後製</strong>
+                            專業錄音室 (ProTools/Audition)、剪接室、全 Mac 電腦教室、商業攝影棚、FM88.5 輔大之聲
+                        </div>
+                    </div>
+
+                    <h4>🌟 知名校友</h4>
+                    <div class="alumni-list">
+                        <span class="alumni-chip">🎬 程偉豪（導演，《咒》入圍金馬多項）</span>
+                        <span class="alumni-chip">🎬 許立達（金鐘獎導演+編劇獎）</span>
+                        <span class="alumni-chip">🎤 MC HotDog 姚中仁（金曲獎歌手）</span>
+                        <span class="alumni-chip">✂️ 粘瓈文（金鐘獎剪輯獎）</span>
+                        <span class="alumni-chip">📻 黃怡馨（廣播金鐘獎主持人）</span>
+                        <span class="alumni-chip">📸 張雍（國際攝影大獎）</span>
+                    </div>
+
+                    <h4>💼 畢業出路</h4>
+                    <p>導演、編劇、攝影師、剪輯師、製片、播報人員、多媒體設計師、動畫師、影展策劃、演藝經紀。約 7% 升學（55% 國內、45% 國外，以英日韓美為主）。</p>
+
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong class="pros">✅ 優點</strong>
+                            • 全台唯一頒發 BFA 藝術學位的傳播系<br>
+                            • 設備極完整（RED、ARRI 等業界高規格器材）<br>
+                            • 師資兼具學術博士＋40 餘位業界兼任實務教師<br>
+                            • 人文藝術氛圍濃厚，外語學院交換資源多
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong class="cons">⚠️ 注意事項</strong>
+                            • 私立大學學費較高<br>
+                            • 課程涵蓋面廣，需自己明確找到深耕方向<br>
+                            • 位於新莊，非台北市中心但交通尚可
+                        </div>
+                    </div>
+
+                    <div class="fit-box">
+                        <strong>🎯 適合女兒嗎？→ ⭐⭐⭐⭐ 高度推薦</strong>
+                        <p style="margin: 0.5rem 0 0;">
+                            影傳系非常適合想「親手拍片、親手剪、親手做」的創作型學生。女兒若有電影導演夢，這裡有完整的器材與拍片實務訓練。錄音室也能讓她延續音樂才華。唯一稍弱的是「影視配樂」專門課程不如北藝大或南藝大深入，但綜合實力非常強。加上社會科加權
+                            2.0 的入學優勢，是攻守兼備的黃金志願。</p>
+                    </div>
+                    <a href="https://www.fju.edu.tw/" target="_blank" class="source-link">🔗 輔仁大學官網</a>
+                    <a href="https://commarts.fju.edu.tw/" target="_blank" class="source-link">🔗 影像傳播學系</a>
+                </div>
+            </div>
+
+            <!-- 5. 南藝大 應用音樂 -->
+            <div class="dept-card">
+                <div class="dept-header">
+                    <h3>🏅 志願 5：國立臺南藝術大學 — 應用音樂學系</h3>
+                    <small>📍 臺南市官田區 ｜ 國立 ｜ 全台唯一專攻「影視配樂」的國立大學科系</small>
+                </div>
+                <div class="dept-body">
+                    <h4>📌 科系定位與核心理念</h4>
+                    <p>南藝大應用音樂學系是全台<strong>唯一一所專攻「應用音樂」（非古典純音樂）的國立大學科系</strong>。有別於傳統音樂系專注演奏與音樂學術，這裡的核心使命是培養能在<strong>影視、流行、商業、科技</strong>領域中實際運作的音樂專業人才。設有五大學程：影像音樂創作、流行音樂創作、爵士音樂演奏、專業錄音、藝術管理。
+                    </p>
+
+                    <h4>📚 五大專業學程</h4>
+                    <ul>
+                        <li><strong>🎬 影像音樂創作學程：</strong>電影配樂、動畫音樂、影像音樂整合——這是最契合女兒的核心學程</li>
+                        <li><strong>🎵 流行音樂創作學程：</strong>流行曲詞編寫、商業音樂製作</li>
+                        <li><strong>🎷 爵士音樂演奏學程：</strong>即興演奏、爵士鋼琴/鼓/貝斯等</li>
+                        <li><strong>🎙️ 專業錄音學程：</strong>3D 錄音、VR 音場設計、混音工程</li>
+                        <li><strong>🎨 藝術管理學程：</strong>策展、文化創意產業經營</li>
+                    </ul>
+
+                    <h4>🔧 硬體設備（千萬級）</h4>
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong>🎙️ 專業錄音室群</strong>
+                            Neumann U87/KM184、AKG C414、Earthworks 系列麥克風、Pro Tools & Cubase DAW
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong>🎸 排練與演出空間</strong>
+                            練團室、琴房、混音控制室、各式電吉他/電貝斯音箱 (Laney/Fender)、音效後製室
+                        </div>
+                    </div>
+
+                    <h4>🌟 知名校友</h4>
+                    <div class="alumni-list">
+                        <span class="alumni-chip">🎬 蔡宜均（首位入選柏林影展新秀營配樂家，30+ 部電影配樂）</span>
+                        <span class="alumni-chip">🏆 陳怡嘉（第60屆金鐘獎戲劇配樂獎）</span>
+                        <span class="alumni-chip">🎵 王孟迪（聲音設計師，臺灣燈會紀實影片）</span>
+                    </div>
+                    <p><small>💡 講座教師包括傳奇音樂製作人<strong>李壽全</strong>（〈一樣的月光〉、〈未來的未來〉）。</small></p>
+
+                    <h4>💼 畢業出路</h4>
+                    <p>影視配樂師、錄音工程師、音效設計師、流行音樂製作人、藝術管理專員、策展公司、經紀公司。<strong>93% 畢業生選擇繼續攻讀國內研究所。</strong></p>
+
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong class="pros">✅ 優點</strong>
+                            • 全台唯一「影視配樂」國立專攻科系，獨一無二<br>
+                            • 千萬級專業錄音設備，業界標準訓練<br>
+                            • 師資具實戰經驗（含金鐘獎得主、柏林影展配樂家）<br>
+                            • 國立大學學費親民
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong class="cons">⚠️ 注意事項</strong>
+                            • 位於臺南官田，地點偏僻，生活機能較低<br>
+                            • 偏向純「聽覺幕後」，不適合想當電影導演的人<br>
+                            • 93% 升學率代表業界直接就業機會相對較少<br>
+                            • 若不喜歡配樂/錄音，其他出路較為侷限
+                        </div>
+                    </div>
+
+                    <div class="fit-box">
+                        <strong>🎯 適合女兒嗎？→ ⭐⭐⭐⭐⭐ 音樂才華最佳發揮舞台</strong>
+                        <p style="margin: 0.5rem 0 0;">
+                            如果女兒的核心熱情是「用音樂說故事」——為電影配樂、用聲音設計營造氛圍——南藝大就是她的天堂。她的小號獨奏和聲樂能力在第二階段術科面試中會是絕對王牌。唯一的取捨是：這裡專精音樂幕後，而非電影導演台前。若她「兩個都想」，可能北藝大
+                            MIT 的平衡性更好。</p>
+                    </div>
+                    <a href="https://music.tnnua.edu.tw/" target="_blank" class="source-link">🔗 南藝大應用音樂學系</a>
+                </div>
+            </div>
+
+            <!-- 6. 世新 廣電 -->
+            <div class="dept-card">
+                <div class="dept-header">
+                    <h3>🛡️ 志願 6：世新大學 — 廣播電視電影學系</h3>
+                    <small>📍 臺北市文山區 ｜ 私立 ｜ 台灣傳播業界第一品牌 ｜ 廣播組 / 電視組 / 電影組</small>
+                </div>
+                <div class="dept-body">
+                    <h4>📌 科系定位與核心理念</h4>
+                    <p>世新廣電系被業界譽為<strong>「台灣傳播人才的黃埔軍校」</strong>。它不是學術象牙塔，而是一座<strong>完全對接業界實務的影視人才工廠</strong>。設有三大組別：廣播與聲音設計組、電視組、電影組，並鼓勵跨組修課，培養全方位能力。
+                    </p>
+
+                    <h4>📚 三大組別</h4>
+                    <ul>
+                        <li><strong>🎙️ 廣播與聲音設計組：</strong>Podcast、廣播劇、聲音設計、配音配樂、流行音樂應用學程</li>
+                        <li><strong>📺 電視組：</strong>戲劇短片、非戲劇節目、轉播直播、頻道規劃、網路影音</li>
+                        <li><strong>🎬 電影組：</strong>劇情片/紀錄片創作、編劇、導演、攝影、美術、後製調光、LED 智能攝影棚、特殊化妝設計</li>
+                    </ul>
+
+                    <h4>🔧 硬體設備（全台大學之最）</h4>
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong>🌐 全台最大 LED 虛擬攝影棚 (LVS)</strong>
+                            2200+ 塊 LED 面板、寬 15m × 高 6m 的 270° 環形螢幕牆。與《阿凡達》續集、迪士尼《曼達洛人》同等級虛擬製片技術。全台大學唯一。
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong>🎬 實景攝影棚</strong>
+                            多功能實景棚含 32 個活動景片，可搭建飛機艙等場景。ARRI、Aputure 專業燈具。
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong>📻 世新廣播電台</strong>
+                            校內實習電台，學生可實際操作新聞採訪、編輯、播報
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong>✂️ 後製中心</strong>
+                            專業剪接室、影視調光剪輯室、影音播客直播間、Avid / DaVinci Resolve / After Effects
+                        </div>
+                    </div>
+
+                    <h4>🌟 知名校友</h4>
+                    <div class="alumni-list">
+                        <span class="alumni-chip">🎬 湯昇榮（《茶金》《火神的眼淚》製作人）</span>
+                        <span class="alumni-chip">🎬 金馬獎最佳動畫《八戒》監製</span>
+                        <span class="alumni-chip">📺 白歆惠（藝人）</span>
+                        <span class="alumni-chip">📺 寇世勳（金鐘獎影帝）</span>
+                        <span class="alumni-chip">📺 曾國城（主持人）</span>
+                        <span class="alumni-chip">📺 賴雅妍（藝人）</span>
+                        <span class="alumni-chip">📺 廖筱君（資深主播）</span>
+                    </div>
+
+                    <h4>💼 畢業出路</h4>
+                    <p>導演、編劇、製片、攝影指導、剪輯師、後製特效、藝術指導、節目企劃、主持人、YouTuber、直播技術人員、影視策展。實習合作：LINE、公視、台灣女性影像學會等。<strong>66%
+                            畢業生國內深造，34% 前往國外（中/加/美/韓）。</strong></p>
+
+                    <div class="dept-grid">
+                        <div class="dept-grid-item">
+                            <strong class="pros">✅ 優點</strong>
+                            • 全台大學唯一好萊塢等級 LED 虛擬攝影棚<br>
+                            • 業界校友網絡超強：幾乎所有電視台和電影劇組都有世新人<br>
+                            • 理論與實務並重，學生在校即完成大量作品<br>
+                            • 跨組修課制度靈活，可同時學電影和聲音設計
+                        </div>
+                        <div class="dept-grid-item">
+                            <strong class="cons">⚠️ 注意事項</strong>
+                            • 私立大學學費較高<br>
+                            • 拍攝製作需長時間投入，學業壓力大<br>
+                            • 學生人數多，器材搶借情況可能發生<br>
+                            • 需要高度主動性，不主動鏈結資源就容易被埋沒
+                        </div>
+                    </div>
+
+                    <div class="fit-box">
+                        <strong>🎯 適合女兒嗎？→ ⭐⭐⭐⭐ 最強保底且實力硬核</strong>
+                        <p style="margin: 0.5rem 0 0;">
+                            世新廣電系是「保底志願」中含金量最高的一所。對想拍電影的女兒來說，電影組提供從編劇到調光的完整訓練鏈。最大的加分項是「廣播與聲音設計組」可以跨組修課——她的音樂背景在這個組會被視為寶藏。LED
+                            虛擬攝影棚更是全台大學獨一無二的利器。如果把它當「保底」，這個保底的含金量極高。</p>
+                    </div>
+                    <a href="https://rtvf.shu.edu.tw/" target="_blank" class="source-link">🔗 世新廣電系官網</a>
+                </div>
+            </div>
+
+            <!-- 綜合比較表 -->
+            <div class="card">
+                <h2>📊 六大志願・關鍵維度綜合比較</h2>
+                <table>
+                    <tr>
+                        <th>維度</th>
+                        <th>北藝大 MIT</th>
+                        <th>清大藝術</th>
+                        <th>政大傳播</th>
+                        <th>輔大影傳</th>
+                        <th>南藝大音樂</th>
+                        <th>世新廣電</th>
+                    </tr>
+                    <tr>
+                        <td><strong>音樂才華發揮</strong></td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>電影導演訓練</strong></td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>業界就業力</strong></td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>學歷品牌力</strong></td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>設備先進度</strong></td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td><strong>跨域整合力</strong></td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr style="background-color: #f0fdf4;">
+                        <td><strong>🎯 女兒契合度</strong></td>
+                        <td><strong>⭐⭐⭐⭐⭐</strong></td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td><strong>⭐⭐⭐⭐</strong></td>
+                        <td><strong>⭐⭐⭐⭐⭐</strong></td>
+                        <td><strong>⭐⭐⭐⭐</strong></td>
+                    </tr>
+                </table>
+
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <strong>💡 Patric 最終建議：</strong>
+                    <ul style="margin: 0.5rem 0 0; padding-left: 1.5rem;">
+                        <li><strong>如果女兒想「音樂×影像」兩者兼具 →</strong> 北藝大 MIT 是無可替代的首選</li>
+                        <li><strong>如果女兒更想專精「影視配樂」→</strong> 南藝大應用音樂學系是唯一正解</li>
+                        <li><strong>如果女兒更想「拍電影當導演」→</strong> 世新廣電系電影組提供最完整的實戰訓練鏈</li>
+                        <li><strong>如果女兒想要「學歷品牌＋穩定探索」→</strong> 政大傳播或清大藝術帶來頂大光環</li>
+                        <li><strong>如果想要「拍片實務＋藝術學位＋社會科優勢」→</strong> 輔大影傳是攻守最平衡的選擇</li>
+                    </ul>
+                </div>
             </div>
 
         </div>
@@ -703,14 +1556,15 @@
             // Remove active classes
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            
+
             // Add active class to clicked tab and section
             event.target.classList.add('active');
             document.getElementById(tabId).classList.add('active');
-            
+
             // Scroll to top
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
+
 </html>
